@@ -1,0 +1,5 @@
+﻿Kimlik	BIRIMADI
+1	m2
+2	m3
+3	ADET
+4	m

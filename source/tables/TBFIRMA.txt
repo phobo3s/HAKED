@@ -1,0 +1,4 @@
+﻿Kimlik	FIRMAADI
+1	DALSAN
+2	PINARTAŞ
+3	TG

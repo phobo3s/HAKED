@@ -1,0 +1,3 @@
+﻿Kimlik	PARABIRIMI
+1	TRY
+2	EUR

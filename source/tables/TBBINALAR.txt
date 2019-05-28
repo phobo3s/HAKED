@@ -1,0 +1,7 @@
+﻿Kimlik	BINAADI
+1	FTR
+2	TSB-1
+3	TSB-2
+4	MH-A
+5	MH-B
+6	MH-C

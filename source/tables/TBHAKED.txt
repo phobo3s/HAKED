@@ -1,0 +1,5 @@
+﻿Kimlik	ISADI	HAKEDISNO
+3	1	6
+4	1	7
+5	2	1
+6	1	5
