@@ -4,9 +4,9 @@ Option Explicit
 Sub newicmal(binaName As String, wbook As Excel.Workbook)
 Dim paraBirim As String
 Dim genicmName As String
-Dim i As Long 'sayaÃ§
+Dim i As Long 'sayaç
 Dim sayfaNo As Integer
-Dim j As Integer 'sayaÃ§2
+Dim j As Integer 'sayaç2
 
 genicmName = wbook.ActiveSheet.name
 
@@ -15,17 +15,17 @@ Exit Sub
 Else
 End If
 
-'BÃLGÄ° TOPLA
+'BÝLGÝ TOPLA
 paraBirim = Right(wbook.ActiveSheet.name, 3)
 sayfaNo = wbook.ActiveSheet.Range("t3").Value
 
 'yer belirleme!! KOPYALAMA
-With wbook.Sheets("ÃMALAT ÃCMAL-SBLN")
+With wbook.Sheets("ÝMALAT ÝCMAL-SBLN")
     .Visible = True
     .Copy After:=wbook.Worksheets(wbook.Sheets(6).Index)
     .Visible = xlVeryHidden
 End With
-wbook.ActiveSheet.name = "ÃMALAT ÃCMAL-" & binaName & "-" & paraBirim
+wbook.ActiveSheet.name = "ÝMALAT ÝCMAL-" & binaName & "-" & paraBirim
 wbook.ActiveSheet.Tab.ColorIndex = 5
 
 For j = 1 To sayfaNo - 1
@@ -34,17 +34,17 @@ Next j
 
 Dim adress As String
 
-'BÃLGÃ YAZ
+'BÝLGÝ YAZ
 With wbook.ActiveSheet
-    .Range("a3").Value = binaName & " ÃMALAT ÃCMAL TABLOSU"
+    .Range("a3").Value = binaName & " ÝMALAT ÝCMAL TABLOSU"
     .Range("r2").Value = paraBirim
-    .Range("e5").Value = wbook.Worksheets("Data").Range("C10") & "  (" & binaName & " BÃNASI)"
-'ÃLK KISMI GENEL ÃCMALDEN AL
+    .Range("e5").Value = wbook.Worksheets("Data").Range("C10") & "  (" & binaName & " BÝNASI)"
+'ÝLK KISMI GENEL ÝCMALDEN AL
 Dim l As Long
 Dim p As Long
 
 For p = 0 To (sayfaNo - 1)
-If p > 1 Then 'BÃRDEN FAZLA SAYFASI VAR ÃSE BURADAN
+If p > 1 Then 'BÝRDEN FAZLA SAYFASI VAR ÝSE BURADAN
 l = 1
 Else
 l = 0
@@ -54,7 +54,7 @@ End If
             adress = .Range("b9").Offset(i, j).Address
             adress = Replace(adress, "$", "")
             adress = "'" & genicmName & "'!" & adress
-            .Range("b9").Offset(i, j).FormulaLocal = "=eÃ°er(" & adress & "=" & Chr(34) & Chr(34) & ";" & Chr(34) & Chr(34) & ";" & adress & ")"
+            .Range("b9").Offset(i, j).FormulaLocal = "=eðer(" & adress & "=" & Chr(34) & Chr(34) & ";" & Chr(34) & Chr(34) & ";" & adress & ")"
     Next i
     Next j
 Next p
@@ -63,9 +63,9 @@ End With
 Dim ifFormula As String
 
 With wbook.Sheets(genicmName)
-'SAYILARI ÃCMALLERDEN AL VE + ile FORMÃœLE EKLE
+'SAYILARI ÝCMALLERDEN AL VE + ile FORMÜLE EKLE
 For p = 0 To (sayfaNo - 1)
-If p > 1 Then 'BÃRDEN FAZLA SAYFASI VAR ÃSE BURADAN
+If p > 1 Then 'BÝRDEN FAZLA SAYFASI VAR ÝSE BURADAN
 l = 1
 Else
 l = 0
@@ -75,7 +75,7 @@ End If
         adress = .Range("j9").Offset(i, j).Address
         adress = Replace(adress, "$", "")
         adress = "'" & wbook.ActiveSheet.name & "'!" & adress
-        ifFormula = "eÃ°er(" & adress & "=" & Chr(34) & Chr(34) & ";" & 0 & ";" & adress & ")"
+        ifFormula = "eðer(" & adress & "=" & Chr(34) & Chr(34) & ";" & 0 & ";" & adress & ")"
         If .Range("j9").Offset(i, j).FormulaLocal = "" Then
             .Range("j9").Offset(i, j).FormulaLocal = "=" & ifFormula
         Else

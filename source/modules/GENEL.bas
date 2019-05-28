@@ -7,13 +7,7 @@ Dim i As Integer
 i = Access.Application.CurrentDb.TableDefs.Count
 
 
-
-
-
-
-
-
-
+'birgün back end database yaparsam açýldýðýnda sayfalarýn güncellenmesi için yapýlan bir durum.
 
 End Sub
 

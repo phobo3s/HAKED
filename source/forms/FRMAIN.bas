@@ -384,7 +384,7 @@ End If
 
 'TASLAĞI AÇ
 fileName = "HKDS.xlsm"
-Path = "C:\Users\berk.kilinc\Desktop\HKDS\HKDS03"
+Path = CurrentProject.Path
 
 If GENEL.AlreadyOpen(fileName, Path) Then
     Set exl = GetObject(, "Excel.Application")
