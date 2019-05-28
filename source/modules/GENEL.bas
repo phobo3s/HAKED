@@ -1,4 +1,4 @@
-Option Compare Database
+ï»¿Option Compare Database
 Option Explicit
 
 Public Sub AutoUpdate()
@@ -7,7 +7,7 @@ Dim i As Integer
 i = Access.Application.CurrentDb.TableDefs.Count
 
 
-'birgün back end database yaparsam açıldığında sayfaların güncellenmesi için yapılan bir durum.
+'birgÃ¼n back end database yaparsam aÃ§Ä±ldÄ±ÄŸÄ±nda sayfalarÄ±n gÃ¼ncellenmesi iÃ§in yapÄ±lan bir durum.
 
 End Sub
 

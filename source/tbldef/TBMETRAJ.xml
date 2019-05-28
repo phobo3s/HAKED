@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:od="urn:schemas-microsoft-com:officedata">
 <xsd:element name="dataroot">
 <xsd:complexType>
@@ -20,7 +20,7 @@
 <xsd:element name="HAKEDISKOD" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int"/>
 <xsd:element name="MALZKAL" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int"/>
 <xsd:element name="IMALATKAL" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int"/>
-<xsd:element name="BİNA" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int"/>
+<xsd:element name="BÄ°NA" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int"/>
 <xsd:element name="BLOK" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int"/>
 <xsd:element name="KAT" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int"/>
 <xsd:element name="MAHAL_x002F_NOTLAR" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">

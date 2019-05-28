@@ -1,4 +1,4 @@
-Option Compare Database
+﻿Option Compare Database
 Option Explicit
 Sub addMetraj(wbook As Excel.Workbook)
 
@@ -85,10 +85,10 @@ With wbook.ActiveSheet
 .Range("m8") = binaadi
 End With
 
-'isimli alaný belirleme
+'isimli alanı belirleme
 Dim rangeNameK As String 'kümülatif
 Dim rangeNameO As String 'önceki
-Dim rangeNameB As String 'bu hakediþ
+Dim rangeNameB As String 'bu hakediş
 
 rangeNameK = "M_" & wbook.ActiveSheet.name & "_K"
 rangeNameO = "M_" & wbook.ActiveSheet.name & "_O"
@@ -137,7 +137,7 @@ End Sub
 
 Sub addIcmalPage()
 
-'Ýcmal sayfasý ekleyicik
+'İcmal sayfası ekleyicik
 Dim i As Long
 Dim sayfSayi As Long
 Dim offsCount As Long
@@ -162,14 +162,14 @@ Application.ActiveSheet.PageSetup.PrintArea = "A1:R" & (sayfSayi * (offsCount - 
 
 Range("t3").Value = sayfSayi
 
-'Sayfa Temizliði
+'Sayfa Temizliği
 Range("B9:H25").Offset((sayfSayi - 1) * (offsCount - 1), 0).Value = ""
 Range("J9:L25").Offset((sayfSayi - 1) * (offsCount - 1), 0).Value = ""
 
 'yeni sayfa Ek düzenlemeler
 Range("R5").Offset((sayfSayi - 1) * (offsCount - 1), 0).Formula = "=R" & 5 + ((sayfSayi - 2) * (offsCount - 1)) & "+1"
 Range("A9").Offset((sayfSayi - 1) * (offsCount - 1), 0).Value = ""
-Range("B9").Offset((sayfSayi - 1) * (offsCount - 1), 0).Value = "ÖNCEKÝ SAYFADAN GELEN"
+Range("B9").Offset((sayfSayi - 1) * (offsCount - 1), 0).Value = "ÖNCEKİ SAYFADAN GELEN"
 
 Range("H9").Offset((sayfSayi - 1) * (offsCount - 1), 0).Value = "=H" & Range("H26").Offset((sayfSayi - 2) * (offsCount - 1), 0).Row
 Range("I9").Offset((sayfSayi - 1) * (offsCount - 1), 0).Value = "=I" & Range("I26").Offset((sayfSayi - 2) * (offsCount - 1), 0).Row
@@ -184,7 +184,7 @@ Range("e5").Offset((sayfSayi - 1) * (offsCount - 1), 0).Value = "=$E$5"
 Range("A5").Offset((sayfSayi - 1) * (offsCount - 1), 0).Value = "=$A$3"
 Range("B9:G9").Offset((sayfSayi - 1) * (offsCount - 1), 0).Select
 'Selection.MergeCells
-'HÜCRELERÝ BÝRLEÞTÝR VE FORMATLA.
+'HÜCRELERİ BİRLEŞTİR VE FORMATLA
 
 
 End Sub
